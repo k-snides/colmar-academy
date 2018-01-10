@@ -2,3 +2,73 @@
 ----- Mobile First -----
 =================================================== */
 
+/* ----- General Styles ----- */
+html {
+	font-size: 16px;
+}
+
+body {
+	background: rgb(255, 255, 255);
+}
+
+/* Flexbox */
+.flex {
+	display: flex;
+}
+
+
+
+
+/* ----- Header & Navigation ----- */
+/* hides desktop navigation on mobile devices */
+.desktop {
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+----- Desktop (above 1024px) -----
+=================================================== */
+@media screen and (min-width: 1024px) {
+	
+	/* ----- Header & Navigation ----- */
+	/* hides mobile navigation on desktop */
+	.mobile {
+		display: none;
+	}
+	/* shows desktop navigation on desktop */
+	.desktop {
+		display: flex;
+	}
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
