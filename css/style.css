@@ -25,6 +25,22 @@ body {
 	display: none;
 }
 
+header {
+	height: 4rem;
+	align-items: center;
+	
+	border: 1px solid black;
+}
+header img {
+	flex: 1;
+}
+
+header nav.mobile {
+	flex: 3;
+}
+header ul {
+	justify-content: space-around;
+}
 
 
 
