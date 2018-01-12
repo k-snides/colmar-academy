@@ -104,7 +104,7 @@ header ul {
 }
 
 /* --- Articles --- */
-article {
+.articles article {
 	padding: 0 1rem;
 	margin-top: 4rem;
 }
@@ -118,21 +118,24 @@ article .read-more {
 
 article h3,
 article p,
-article .read-more {
+article .read-more,
+article h4 {
 	padding: 0 1rem;
 	margin-top: 1rem;
 }
 
 .articles .orientation {
 	background: url('../img/information-orientation-mobile.jpg') no-repeat center center;
+	background-size: cover;
+	height: 10rem;
 }
 .articles .campus {
 	background: url('../img/information-campus-mobile.jpg') no-repeat center center;
+	background-size: cover;
+	height: 10rem;
 }
 .articles .special-guest {
 	background: url('../img/information-guest-lecture-mobile.jpg') no-repeat center center;
-}
-.articles {
 	background-size: cover;
 	height: 10rem;
 }
@@ -140,6 +143,11 @@ article .read-more {
 
 
 
+/* ----- Start Learning section ----- */
+.start-learning article {
+	padding: 0 1rem;
+	margin-top: 2rem;
+}
 
 
 
