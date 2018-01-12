@@ -28,14 +28,14 @@ body {
 	
 }
 
-
-
-
-/* ----- Header & Navigation ----- */
 /* hides desktop navigation on mobile devices */
 .desktop {
 	display: none;
 }
+
+
+
+/* ----- Header & Navigation ----- */
 
 header {
 	height: 4rem;
@@ -94,6 +94,51 @@ header ul {
 	padding: 1rem 0;
 	text-align: center;
 }
+
+
+
+
+/* ----- Main Content section ----- */
+.main-content {
+	padding: 1rem 0 2rem;
+}
+
+/* --- Articles --- */
+article {
+	padding: 0 1rem;
+	margin-top: 4rem;
+}
+article:first-child {
+	margin-top: 0;
+}
+
+article .read-more {
+	display: inline-block;
+}
+
+article h3,
+article p,
+article .read-more {
+	padding: 0 1rem;
+	margin-top: 1rem;
+}
+
+.articles .orientation {
+	background: url('../img/information-orientation-mobile.jpg') no-repeat center center;
+}
+.articles .campus {
+	background: url('../img/information-campus-mobile.jpg') no-repeat center center;
+}
+.articles .special-guest {
+	background: url('../img/information-guest-lecture-mobile.jpg') no-repeat center center;
+}
+.articles {
+	background-size: cover;
+	height: 10rem;
+}
+
+
+
 
 
 
