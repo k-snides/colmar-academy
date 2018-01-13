@@ -55,8 +55,6 @@ video {
 header {
 	height: 4rem;
 	align-items: center;
-	
-	border: 1px solid black;
 }
 header img {
 	flex: 1;
@@ -201,6 +199,19 @@ footer {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 
 ----- Desktop (above 1024px) -----
 =================================================== */
@@ -216,6 +227,33 @@ footer {
 		display: flex;
 	}
 	
+	/* ----- Header & Navigation ----- */
+	header {
+		justify-content: flex-end;
+		padding: 0 1.5rem;
+	}
+	header img {
+		flex: 0;
+		border: 1px dotted green;
+	}
+	header h1 {
+		margin-right: auto;
+		text-transform: uppercase;
+		color: #333;
+		font-size: 1.5rem;
+		/*font-weight: 400;*/
+	}
+	header span {
+		color: #aaa;
+	}
+
+	
+	header ul li {
+		margin-left: 1rem;
+	}
+	header .desktop a {
+		text-decoration: none;
+	}
 
 }
 
