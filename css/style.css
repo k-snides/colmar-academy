@@ -51,7 +51,6 @@ video {
 
 
 /* ----- Header & Navigation ----- */
-
 header {
 	height: 4rem;
 	align-items: center;
@@ -73,6 +72,10 @@ header ul {
 
 
 /* ----- Banner Section ----- */
+.banner-cta {
+	flex-direction: column;
+}
+
 .banner {
 	background: url('../img/banner.jpg') no-repeat center center;
 	background-size: cover;
@@ -240,19 +243,35 @@ footer {
 		margin-right: auto;
 		text-transform: uppercase;
 		color: #333;
-		font-size: 1.5rem;
+		font-size: 1.250rem;
 		/*font-weight: 400;*/
 	}
 	header span {
 		color: #aaa;
 	}
 
-	
 	header ul li {
 		margin-left: 1rem;
 	}
 	header .desktop a {
 		text-decoration: none;
+	}
+
+
+	/* ----- Banner Section ----- */
+	.banner-cta {
+		flex-direction: row;
+		background: #eee;
+		padding: 2rem 1.5rem;
+	}
+	.banner {
+		flex: 1 0 60%;
+		height: 28rem;
+	}
+	.learn-something {
+		flex: 1 0 40%;
+		padding: 0 0 0 1.5rem;
+		align-self: center;
 	}
 
 }
