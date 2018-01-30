@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 		<title>Colmar Academy</title>
 
 		<!-- CSS -->
@@ -84,9 +87,9 @@
 
 
 		<!-- Main Content section -->
-		<div class="main-content">
+		<div class="main-content flex">
 			<!-- Keep Practicing section -->
-			<section class="keep-practicing desktop">
+			<section class="keep-practicing desktop flex">
 				<div class="keep-practicing-bg">
 					<!-- Keep Practicing background image here -->
 				</div><!-- /.keep-practicing-bg -->
@@ -105,48 +108,54 @@
 			<!-- Articles section -->
 			<section class="articles">
 				<!-- Orientation -->
-				<article>
+				<article class="flex">
 					<div class="orientation">
 						<!-- Orientation background image here -->
 					</div><!-- /.orientation -->
 
-					<h3>Orientation Date</h3>
-
-					<p>
-						Tue 10/11 &amp; Wed 10/12: 8am-3pm
-					</p>
-
-					<a href="#" class="read-more">Read more</a>
+					<div class="article-info">
+						<h3>Orientation Date</h3>
+						
+						<p>
+							Tue 10/11 &amp; Wed 10/12: 8am-3pm
+						</p>
+						
+						<a href="#" class="read-more">Read more</a>
+					</div>
 				</article><!-- end Orientation -->
 
 				<!-- Campus -->
-				<article>
+				<article class="flex">
 					<div class="campus">
 						<!-- Campus background image here -->
 					</div><!-- /.campus -->
 
-					<h3>Our Campus</h3>
-
-					<p>
-						Find which campus is closest to you
-					</p>
-
-					<a href="#" class="read-more">Read more</a>
+					<div class="article-info">
+						<h3>Our Campus</h3>
+						
+						<p>
+							Find which campus is closest to you
+						</p>
+						
+						<a href="#" class="read-more">Read more</a>
+					</div><!-- /.article-info -->
 				</article><!-- end Campus -->
 
 				<!-- Special Guest -->
-				<article>
+				<article class="flex">
 					<div class="special-guest">
 						<!-- Special Guest background image here -->
 					</div><!-- /.special-guest -->
 
-					<h3>Join a keynote with Oliver Sack about music in mecial treatment</h3>
-
-					<p>
-						Tue 10/11 &amp; Wed 10/12: 8am-3pm
-					</p>
-
-					<a href="#" class="read-more">Read more</a>
+					<div class="article-info">
+						<h3>Join a keynote with Oliver Sack about music in mecial treatment</h3>
+						
+						<p>
+							Tue 10/11 &amp; Wed 10/12: 8am-3pm
+						</p>
+						
+						<a href="#" class="read-more">Read more</a>
+					</div>
 				</article><!-- end Special Guest -->
 			</section><!-- /.articles -->
 		</div><!-- /.main-content -->
@@ -156,7 +165,7 @@
 		<section class="start-learning">
 			<h2>Start Learning</h2>
 
-			<div class="start-learning-cards">
+			<div class="start-learning-cards flex">
 				<!-- Software Engineering -->
 				<article>
 					<img src="img/course-software.jpg" alt="Software Engineer Course image" />

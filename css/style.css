@@ -121,6 +121,7 @@ header ul {
 /* --- Articles --- */
 .articles article {
 	margin-top: 4rem;
+	flex-direction: column;
 }
 article:first-child {
 	margin-top: 0;
@@ -132,8 +133,7 @@ article .read-more {
 
 article h3,
 article p,
-article .read-more,
-article h4 {
+article .read-more {
 	padding: 0 1rem;
 	margin-top: 1rem;
 }
@@ -163,9 +163,14 @@ article h4 {
 	padding-bottom: 4.5rem;
 }
 
+.start-learning-cards {
+	flex-direction: column;
+	/*flex-wrap: nowrap;*/
+}
+
 .start-learning h2 {
-	margin: 2rem 0 1rem 0;
 	text-align: center;
+	margin: 2rem 0 1rem 0;
 }
 
 .start-learning article {
@@ -227,7 +232,7 @@ footer {
 	}
 	/* shows desktop navigation on desktop */
 	.desktop {
-		display: flex;
+		display: block;
 	}
 	
 	/* ----- Header & Navigation ----- */
@@ -274,7 +279,134 @@ footer {
 		align-self: center;
 	}
 
-}
+
+
+
+
+	/* ----- Main Content section ----- */
+	.main-content {
+		padding: 2rem 1.5rem;
+	}
+
+	.keep-practicing {
+		flex-direction: column;
+		flex: 1 0 60%;
+		padding-right: 1.5rem;
+	}
+	.keep-practicing-bg {
+		background: url('../img/information-main.jpg') no-repeat center center;
+		background-size: cover;
+		height: 28rem;
+	}
+	.keep-practicing h2 {
+		margin-top: 2rem;
+	}
+	.keep-practicing blockquote {
+		margin: 1.5rem 0;
+		font-size: 1.250rem;
+		font-weight: 100;
+		line-height: 1.4;
+	}
+
+	.main-content article {
+		flex-direction: row;
+		padding: 1rem 1rem;
+	}
+	.main-content article:nth-child(1) {
+		padding-top: 0;
+	}
+	.main-content article:nth-child(3) {
+		background: #eee;
+	}
+
+	article h3,
+	article p,
+	article .read-more {
+		padding-bottom: 0.5rem;
+	}
+
+	.articles .orientation {	
+		background: url('../img/information-orientation.jpg') no-repeat center center;
+		background-size: cover;
+		height: auto;
+		flex: 1 0 35%;
+	}
+	.articles .campus {	
+		background: url('../img/information-campus.jpg') no-repeat center center;
+		background-size: cover;
+		height: auto;
+		flex: 1 0 35%;
+	}
+	.articles .special-guest {	
+		background: url('../img/information-guest-lecture.jpg') no-repeat center center;
+		background-size: cover;
+		height: auto;
+		flex: 1 0 35%;
+	}
+
+	.article-info {
+		flex-direction: column;
+		justify-content: center;
+		flex: 1 0 65%;
+	}
+
+
+
+
+
+
+	/* ----- Start Learning section ----- */
+	.start-learning {
+		background: #eee;
+	}
+
+	.start-learning-cards {
+		flex-direction: row;
+		flex-wrap: wrap;
+		padding: 0 4.5rem;
+	}
+	
+	.start-learning article {
+		background: #fff;
+		padding: 0 0 1.5rem 0;
+		/*display: inline-block;*/
+		/*width: 30%;*/
+		display: flex;
+		flex-direction: column;
+		flex: 1 0 30%;
+		margin: 0 2rem 2rem 0;
+	}
+	.start-learning article:nth-child(3n + 3) {
+		margin-right: 0;
+	}
+
+	.start-learning img,
+	.start-learning h4,
+	.start-learning p {
+		display: block;
+	}
+
+	.start-learning h3 {
+		background: #fff;
+		font-size: 2rem;
+	}
+	.start-learning h4 {
+		padding: 0.5rem 0 0.5rem 1rem;
+	}
+	.start-learning p {
+		margin: 0;
+	}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
