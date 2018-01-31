@@ -44,11 +44,51 @@ article {
 }
 
 blockquote {
+	position: relative;
+	color: rgb(128, 0, 128);
+	padding: 0 2.5rem;
+	font-weight: bold;
 	margin: 1.5rem 0;
 	font-size: 1.250rem;
 	font-weight: 100;
 	line-height: 1.4;
+	background-size: 50% 50%;
 }
+blockquote::before,
+blockquote::after {
+	position: absolute;
+	font-size: 6rem;
+}
+blockquote::before {
+	content: '\201c';
+	top: -20%;
+	left: 0%;
+}
+blockquote::after {
+	content: '\201d';
+	left: 95%;
+	top: 40%;
+}
+.blockquote-bg {
+	transform: rotate(-5deg);
+	height: 4rem;
+	position: absolute;
+	top: 15%;
+	width: 90%;
+	background: rgba(128, 0, 128, 0.1);
+	border-radius: 50%;
+	box-shadow: 0 2px 10px 0 rgba(0,0,0,0.2),
+							0 0px 14px 0 rgba(0,0,0,0.19);
+}
+
+cite {
+	font-style: italic;
+}
+cite::before {
+	content: '--';
+}
+
+
 
 /* Flexbox */
 .flex {
@@ -61,9 +101,30 @@ video {
 	max-width: 100%;
 }
 
+video,
+.banner,
+.keep-practicing-bg {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),
+							0 6px 20px 0 rgba(0,0,0,0.19);
+	
+}
+
+/* adds a shadow to large bg images */
+
 /* Buttons */
 .btn {
+	border: 3px solid rgb(128, 0, 128);
+	width: 100%;
+	background: rgb(128, 0, 128);
+	display: inline-block;
+	padding: 1rem 0;
+	text-align: center;
 	
+	transition: all 0.3s ease-in;
+}
+.btn:hover {
+	background: transparent;
+	color: rgb(128, 0, 128);
 }
 
 /* hides desktop navigation on mobile devices */
@@ -97,12 +158,16 @@ header ul {
 /* ----- Banner Section ----- */
 .banner-cta {
 	flex-direction: column;
+	background-color: rgba(128, 0, 128, 0.2);
+	/*border: 3px solid rgb(128, 0, 128);*/
+	border-color: rgb(128, 0, 128);
+	border-style: solid;
+	border-width: 3px 0 3px 0;
 }
 
 .banner {
 	background: url('../img/banner.jpg') no-repeat center center;
 	background-size: cover;
-	/*background-size: 100% 100%;*/
 	height: 20rem;
 }
 
@@ -111,7 +176,6 @@ header ul {
 
 /* ----- Learn Something Section ----- */
 .learn-something {
-	background-color: #eee;
 	padding: 2rem 1rem;
 }
 .learn-something p {
@@ -121,13 +185,7 @@ header ul {
 	text-decoration: none;
 	color: #fff;
 }
-.learn-something .btn {
-	width: 100%;
-	background: #aaa;
-	display: inline-block;
-	padding: 1rem 0;
-	text-align: center;
-}
+
 
 
 
@@ -204,7 +262,7 @@ article .read-more {
 }
 
 .start-learning h3 {
-	background: #eee;
+	background: rgba(128, 0, 128, 0.2);
 	padding: 2rem 1rem;
 	margin-bottom: -1.5rem;
 }
@@ -294,7 +352,6 @@ footer {
 	/* ----- Banner Section ----- */
 	.banner-cta {
 		flex-direction: row;
-		background: #eee;
 		padding: 2rem 1.5rem;
 	}
 	.banner {
@@ -317,6 +374,7 @@ footer {
 	}
 
 	.keep-practicing {
+		/*position: relative;*/	
 		flex-direction: column;
 		margin-right: 1.5rem;
 		flex: 1 0 60%;
@@ -337,10 +395,17 @@ footer {
 		padding: 1rem 1rem;
 	}
 	.main-content article:nth-child(1) {
-		padding-top: 0;
+		margin-top: 0;
 	}
 	.main-content article:nth-child(3) {
-		background: #eee;
+		background: rgba(128, 0, 128, 0.1);
+	}
+	.main-content article {
+		background: #eee
+	}
+
+	.main-content article {
+		border-left: 3px solid rgb(128, 0, 128); 
 	}
 
 	article h3,
@@ -381,7 +446,11 @@ footer {
 
 	/* ----- Start Learning section ----- */
 	.start-learning {
-		background: #eee;
+		background-color: rgba(128, 0, 128, 0.2);
+		/*border: 3px solid rgb(128, 0, 128);*/
+		border-color: rgb(128, 0, 128);
+		border-style: solid;
+		border-width: 3px 0 3px 0;
 	}
 
 	.start-learning-cards {
@@ -389,6 +458,12 @@ footer {
 		flex-wrap: wrap;
 		padding: 0 4.5rem;
 	}
+
+
+
+
+
+	
 	
 	.start-learning article {
 		background: #fff;
@@ -397,6 +472,13 @@ footer {
 		flex-direction: column;
 		flex: 1 0 30%;
 		margin: 0 2rem 2rem 0;
+		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),
+								0 6px 20px 0 rgba(0,0,0,0.19);
+		
+		transition: box-shadow 0.2s ease-in;
+	}
+	.start-learning article:hover {
+		box-shadow: 0 16px 12px -6px black;
 	}
 	.start-learning article:nth-child(3n + 3) {
 		margin-right: 0;
@@ -435,6 +517,7 @@ footer {
 		flex: 1 0 60%;
 		padding-right: 1.5rem;
 		max-width: 60;
+		/*position: relative;*/
 	}
 	.thesis-video h2 {
 		margin-top: 1.5rem;
@@ -448,9 +531,12 @@ footer {
 	}
 	.thesis-articles article {
 		padding: 1rem;
+		background: #eee;
+		border-left: 3px solid rgb(128, 0, 128); 
 	}
 	.thesis-articles article:nth-child(1) {
-		background: #eee;
+		background: rgba(128, 0, 128, 0.1);
+		margin-bottom: 3rem;
 	}
 
 	.thesis-articles .fisma {	
@@ -465,6 +551,7 @@ footer {
 		height: 10rem;
 		flex: 1 0 35%;
 	}
+
 
 	
 
