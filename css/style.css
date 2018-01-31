@@ -23,8 +23,23 @@ h2 {
 	font-size: 2.5rem;
 }
 
+h3 {
+	font-size: 2rem;
+}
+
 article {
 	padding: 0 1rem;
+}
+
+.article-info {
+	justify-content: center;
+}
+
+blockquote {
+	margin: 1.5rem 0;
+	font-size: 1.250rem;
+	font-weight: 100;
+	line-height: 1.4;
 }
 
 /* Flexbox */
@@ -44,7 +59,7 @@ video {
 }
 
 /* hides desktop navigation on mobile devices */
-.desktop {
+.mobile-hide {
 	display: none;
 }
 
@@ -200,6 +215,10 @@ article .read-more {
 	margin-bottom: 1rem;
 }
 
+.thesis-articles {
+	display: none;
+}
+
 /* ----- Footer ----- */
 footer {
 	padding: 1rem 0 1rem 1rem;
@@ -231,9 +250,12 @@ footer {
 		display: none;
 	}
 	/* shows desktop navigation on desktop */
-	.desktop {
+	.mobile-hide {
 		display: block;
 	}
+
+
+	
 	
 	/* ----- Header & Navigation ----- */
 	header {
@@ -242,14 +264,12 @@ footer {
 	}
 	header img {
 		flex: 0;
-		border: 1px dotted green;
 	}
 	header h1 {
 		margin-right: auto;
 		text-transform: uppercase;
 		color: #333;
 		font-size: 1.250rem;
-		/*font-weight: 400;*/
 	}
 	header span {
 		color: #aaa;
@@ -258,9 +278,12 @@ footer {
 	header ul li {
 		margin-left: 1rem;
 	}
-	header .desktop a {
+	header .mobile-hide a {
 		text-decoration: none;
 	}
+
+
+
 
 
 	/* ----- Banner Section ----- */
@@ -290,8 +313,8 @@ footer {
 
 	.keep-practicing {
 		flex-direction: column;
+		margin-right: 1.5rem;
 		flex: 1 0 60%;
-		padding-right: 1.5rem;
 	}
 	.keep-practicing-bg {
 		background: url('../img/information-main.jpg') no-repeat center center;
@@ -301,12 +324,7 @@ footer {
 	.keep-practicing h2 {
 		margin-top: 2rem;
 	}
-	.keep-practicing blockquote {
-		margin: 1.5rem 0;
-		font-size: 1.250rem;
-		font-weight: 100;
-		line-height: 1.4;
-	}
+	
 
 	.main-content article {
 		flex-direction: row;
@@ -369,8 +387,6 @@ footer {
 	.start-learning article {
 		background: #fff;
 		padding: 0 0 1.5rem 0;
-		/*display: inline-block;*/
-		/*width: 30%;*/
 		display: flex;
 		flex-direction: column;
 		flex: 1 0 30%;
@@ -388,7 +404,6 @@ footer {
 
 	.start-learning h3 {
 		background: #fff;
-		font-size: 2rem;
 	}
 	.start-learning h4 {
 		padding: 0.5rem 0 0.5rem 1rem;
@@ -401,8 +416,50 @@ footer {
 
 
 
+	/* ----- Thesis Exibits section ----- */
+	.thesis-exibits {
+		flex-direction: column;
+		padding: 0 1.5rem;
+	}
+	.thesis-exibits > h2 {
+		margin: 2rem 0;
+	}
 
+	.thesis-video {
+		flex: 1 0 60%;
+		padding-right: 1.5rem;
+	}
+	.thesis-video h2 {
+		margin-top: 1.5rem;
+		text-align: left;
+	}
 
+	.thesis-articles {
+		display: flex;
+		flex-direction: column;
+		flex: 1 0 35%
+	}
+	.thesis-articles article {
+		padding: 1rem;
+	}
+	.thesis-articles article:nth-child(1) {
+		background: #eee;
+	}
+
+	.thesis-articles .fisma {	
+		background: url('../img/thesis-fisma.jpg') no-repeat center center;
+		background-size: cover;
+		height: 10rem;
+		flex: 1 0 35%;
+	}
+	.thesis-articles .now-and-then {	
+		background: url('../img/thesis-now-and-then.jpg') no-repeat center center;
+		background-size: cover;
+		height: 10rem;
+		flex: 1 0 35%;
+	}
+
+	
 
 
 

@@ -15,7 +15,7 @@
 	<body>
 		<header class="flex">
 			<img src="img/ic-logo.svg" alt="Colmar Academy logo" />
-			<h1 class="desktop">Colmar<span>Academy</span></h1>
+			<h1 class="mobile-hide">Colmar<span>Academy</span></h1>
 
 			<!-- Mobile Navigation -->
 			<nav class="mobile">
@@ -39,7 +39,7 @@
 			</nav><!-- /.mobile -->
 
 			<!-- Desktop Navigation -->
-			<nav class="desktop">
+			<nav class="mobile-hide">
 				<ul class="flex">
 					<li>
 						<a href="#">
@@ -62,7 +62,7 @@
 						</a>
 					</li>
 				</ul>
-			</nav><!-- /.desktop -->
+			</nav><!-- /.mobile-hide -->
 		</header>
 
 
@@ -89,7 +89,7 @@
 		<!-- Main Content section -->
 		<div class="main-content flex">
 			<!-- Keep Practicing section -->
-			<section class="keep-practicing desktop flex">
+			<section class="keep-practicing mobile-hide flex">
 				<div class="keep-practicing-bg">
 					<!-- Keep Practicing background image here -->
 				</div><!-- /.keep-practicing-bg -->
@@ -103,7 +103,7 @@
 				<cite>
 					Emanual, Sr Strategist at Hiring.com
 				</cite>
-			</section>
+			</section><!-- /.keep-practicing -->
 
 			<!-- Articles section -->
 			<section class="articles">
@@ -113,7 +113,7 @@
 						<!-- Orientation background image here -->
 					</div><!-- /.orientation -->
 
-					<div class="article-info">
+					<div class="article-info flex">
 						<h3>Orientation Date</h3>
 						
 						<p>
@@ -130,7 +130,7 @@
 						<!-- Campus background image here -->
 					</div><!-- /.campus -->
 
-					<div class="article-info">
+					<div class="article-info flex">
 						<h3>Our Campus</h3>
 						
 						<p>
@@ -147,11 +147,13 @@
 						<!-- Special Guest background image here -->
 					</div><!-- /.special-guest -->
 
-					<div class="article-info">
-						<h3>Join a keynote with Oliver Sack about music in mecial treatment</h3>
+					<div class="article-info flex">
+						<h3>
+							Our guest lecture
+						</h3>
 						
 						<p>
-							Tue 10/11 &amp; Wed 10/12: 8am-3pm
+							Join a keynote with Oliver Sack about music in mecial treatment
 						</p>
 						
 						<a href="#" class="read-more">Read more</a>
@@ -248,13 +250,58 @@
 
 
 		<!-- Thesis Exibits section -->
-		<section class="thesis-exibits">
+		<div class="thesis-exibits">
 			<h2>Thesis Exibits</h2>
 
-			<video>
-				<source src="vid/thesis.mp4" />
-			</video>
-		</section><!-- /.thesis-exibits -->
+			<div class="thesis-layout flex">
+				<section class="thesis-video">
+					<video controls>
+						<source src="vid/thesis.mp4" />
+					</video>
+					
+					<h2 class="mobile-hide">Reimagine urban</h2>
+					
+					<blockquote class="mobile-hide">
+						"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat id quia libero cupiditate perferendis excepturi quam vitae. Fuga pariatur numquam, veniam dolore aperiam sapiente dolor incidunt, accusantium dignissimos alias, sint."
+					</blockquote>
+				</section>
+				
+				<section class="thesis-articles">
+					<!-- Fisma: Design and Prototype -->
+					<article class="flex">
+						<div class="fisma">
+							<!-- Fisma background image here -->
+						</div><!-- /.fisma -->
+				
+						<div class="article-info flex">
+							<h3>
+								Fisma: Design and Prototype
+							</h3>
+							
+							<p>
+								Designer showcase of new prototype
+							</p>
+						</div>
+					</article><!-- Fisma: Design and Prototype -->
+				
+					<article class="flex">
+						<div class="now-and-then">
+							<!-- Now and then background image here -->
+						</div><!-- /.now-and-then -->
+				
+						<div class="article-info flex">
+							<h3>
+								Now and then
+							</h3>
+							
+							<p>
+								Research study about New York
+							</p>
+						</div>
+					</article><!-- end Now and then -->
+				</section><!-- /.thesis-articles -->
+			</div><!-- /.thesis-layout -->
+		</div><!-- /.thesis-exibits -->
 
 
 		<footer>
