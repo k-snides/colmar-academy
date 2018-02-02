@@ -3,6 +3,8 @@
 =================================================== */
 
 /* ----- General Styles ----- */
+
+/*  Resets padding, margin and box-sizing */
 * {
 	padding: 0;
 	margin: 0;
@@ -39,8 +41,9 @@ article {
 }
 
 .article-info {
-	justify-content: center;
 	flex-direction: column;
+	justify-content: center;
+	flex: 1 0 65%;
 }
 
 blockquote {
@@ -88,28 +91,24 @@ cite::before {
 	content: '--';
 }
 
-
-
 /* Flexbox */
 .flex {
 	display: flex;
 }
 
-/* imgage and video will always fit in container */
+/* Imgage and video will always fit in container */
 img,
 video {
 	max-width: 100%;
 }
 
+/* adds a shadow to large bg images */
 video,
 .banner,
 .keep-practicing-bg {
 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),
 							0 6px 20px 0 rgba(0,0,0,0.19);
-	
 }
-
-/* adds a shadow to large bg images */
 
 /* Buttons */
 .btn {
@@ -128,7 +127,7 @@ video,
 	color: rgb(128, 0, 128);
 }
 
-/* hides desktop navigation on mobile devices */
+/* Hides desktop navigation on mobile devices */
 .mobile-hide {
 	display: none;
 }
@@ -143,7 +142,6 @@ header {
 header img {
 	flex: 1;
 }
-
 header nav.mobile {
 	flex: 3;
 }
@@ -158,8 +156,6 @@ nav ul a:focus {
 	border-bottom: 2px solid rgb(128, 0, 128);
 	font-weight: bold;
 }
-
-
 
 
 
@@ -180,7 +176,6 @@ nav ul a:focus {
 
 
 
-
 /* ----- Learn Something Section ----- */
 .learn-something {
 	padding: 2rem 1rem;
@@ -195,45 +190,36 @@ nav ul a:focus {
 
 
 
-
-
 /* ----- Main Content section ----- */
 .main-content {
 	padding: 1rem 0 2rem;
 	justify-content: center;
 }
 
-/* --- Articles --- */
-.articles article {
+/* --- Main Content articles --- */
+.main-content article {
+	border-bottom: 3px solid rgb(128, 0, 128); 
+	background: #eee;
+	padding-bottom: 1rem;
 	margin-top: 4rem;
 	flex-direction: column;
+}
+.main-content article:nth-child(3) {
+	background: rgba(128, 0, 128, 0.1);
 }
 article:first-child {
 	margin-top: 0;
 }
-
 article .read-more {
 	display: inline-block;
 	text-decoration: none;
 }
-
 article h3,
 article p,
 article .read-more {
 	padding: 0 1rem;
 	margin-top: 1rem;
 }
-
-.main-content article {
-	border-bottom: 3px solid rgb(128, 0, 128); 
-	background: #eee;
-	padding-bottom: 1rem;
-}
-
-.main-content article:nth-child(3) {
-	background: rgba(128, 0, 128, 0.1);
-}
-
 
 .articles .orientation {
 	background: url('../img/information-orientation-mobile.jpg') no-repeat center center;
@@ -253,7 +239,6 @@ article .read-more {
 
 
 
-
 /* ----- Start Learning section ----- */
 .start-learning {
 	border: 1px solid #eee;
@@ -262,28 +247,24 @@ article .read-more {
 
 .start-learning-cards {
 	flex-direction: column;
-	/*flex-wrap: nowrap;*/
 }
 
 .start-learning h2 {
 	text-align: center;
 	margin: 2rem 0 1rem 0;
 }
-
 .start-learning article {
 	margin-top: 2rem;
 }
-
 .start-learning img,
 .start-learning h4,
 .start-learning p {
 	display: none;
 }
-
 .start-learning h3 {
 	background: rgba(128, 0, 128, 0.2);
-	padding: 2rem 1rem;
 	margin-bottom: -1.5rem;
+	padding: 2rem 1rem;
 }
 
 
@@ -301,16 +282,14 @@ article .read-more {
 	display: none;
 }
 
+
+
 /* ----- Footer ----- */
 footer {
-	padding: 1rem 0 1rem 1rem;
+	color: #fff;
+	padding: 1rem 0 2rem 1rem;
+	background: linear-gradient(#000, rgb(128, 0, 128));
 }
-
-
-
-
-
-
 
 
 
@@ -326,7 +305,7 @@ footer {
 =================================================== */
 @media screen and (min-width: 1024px) {
 	
-	/* ----- Header & Navigation ----- */
+	/* ----- General Styles ----- */
 	/* hides mobile navigation on desktop */
 	.mobile {
 		display: none;
@@ -337,7 +316,6 @@ footer {
 	}
 
 
-	
 	
 	/* ----- Header & Navigation ----- */
 	header {
@@ -356,7 +334,6 @@ footer {
 	header span {
 		color: #aaa;
 	}
-
 	header ul li {
 		margin-left: 1rem;
 	}
@@ -366,24 +343,22 @@ footer {
 
 
 
-
-
 	/* ----- Banner Section ----- */
 	.banner-cta {
 		flex-direction: row;
 		padding: 2rem 1.5rem;
 	}
+
 	.banner {
 		flex: 1 0 60%;
 		height: 28rem;
 	}
+
 	.learn-something {
 		flex: 1 0 40%;
 		padding: 0 0 0 1.5rem;
 		align-self: center;
 	}
-
-
 
 
 
@@ -408,28 +383,17 @@ footer {
 		margin-top: 2rem;
 	}
 	
-
 	.main-content article {
 		flex-direction: row;
 		padding: 1rem 1rem;
+		border-left: 3px solid rgb(128, 0, 128);
+		border-bottom: none;
 	}
 	.main-content article:nth-child(1) {
 		margin-top: 0;
 	}
-	/*.main-content article:nth-child(3) {
-		background: rgba(128, 0, 128, 0.1);
-	}
-	.main-content article {
-		background: #eee
-	}*/
-
 	.main-content .articles {
 		flex: 1;
-	}
-
-	.main-content article {
-		border-left: 3px solid rgb(128, 0, 128);
-		border-bottom: none;
 	}
 
 	article h3,
@@ -457,21 +421,11 @@ footer {
 		flex: 1 0 35%;
 	}
 
-	.article-info {
-		flex-direction: column;
-		justify-content: center;
-		flex: 1 0 65%;
-	}
-
-
-
-
-
+	
 
 	/* ----- Start Learning section ----- */
 	.start-learning {
 		background-color: rgba(128, 0, 128, 0.2);
-		/*border: 3px solid rgb(128, 0, 128);*/
 		border-color: rgb(128, 0, 128);
 		border-style: solid;
 		border-width: 3px 0 3px 0;
@@ -483,12 +437,6 @@ footer {
 		padding: 0 4.5rem;
 	}
 
-
-
-
-
-	
-	
 	.start-learning article {
 		background: #fff;
 		padding: 0 0 1.5rem 0;
@@ -513,9 +461,9 @@ footer {
 	.start-learning p {
 		display: block;
 	}
-
 	.start-learning h3 {
 		background: #fff;
+		padding: 1rem 1rem 2rem 1rem;
 	}
 	.start-learning h4 {
 		padding: 0.5rem 0 0.5rem 1rem;
@@ -523,8 +471,6 @@ footer {
 	.start-learning p {
 		margin: 0;
 	}
-
-
 
 
 
@@ -540,8 +486,7 @@ footer {
 	.thesis-video {
 		flex: 1 0 60%;
 		padding-right: 1.5rem;
-		max-width: 60;
-		/*position: relative;*/
+		max-width: 60%;
 	}
 	.thesis-video h2 {
 		margin-top: 1.5rem;
@@ -562,7 +507,6 @@ footer {
 		background: rgba(128, 0, 128, 0.1);
 		margin-bottom: 3rem;
 	}
-
 	.thesis-articles .fisma {	
 		background: url('../img/thesis-fisma.jpg') no-repeat center center;
 		background-size: cover;
@@ -577,24 +521,9 @@ footer {
 	}
 
 
-	
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	/* ----- Footer ----- */
+	footer {
+		padding: 1rem 0 3rem 2rem;
+	}
+}/* --- end Desktop Media query --- */
