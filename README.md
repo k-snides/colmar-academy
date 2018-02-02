@@ -8,3 +8,4 @@ In this project, the task is to implement the site specified by the wireframes a
 
 Wireframes:
 
+<img src="https://github.com/k-snides/colmar-academy/blob/gh-pages/img/colmar-academy-spec.png" alt="Capstone project wireframe" width="700" height="1000" />
